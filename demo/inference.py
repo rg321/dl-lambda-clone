@@ -17,7 +17,7 @@ s3_client = boto3.resource('s3')
 def lambda_handler(event, context):
     try:
         url = event['img_url']
-        response = requests.get(url)
+        response = requests.get(url, headers={'Access-Control-Allow-Origin': '*'})
         img = imdecode(response.content)
 
 	# 3. common to Jupiter
