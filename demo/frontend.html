@@ -38,6 +38,7 @@
 
             xhr.open("POST", 'API_GATEWAY_ENDPOINT_URL', true);
             xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
             xhr.send(JSON.stringify({
                 img_url: obj_url
             }));
